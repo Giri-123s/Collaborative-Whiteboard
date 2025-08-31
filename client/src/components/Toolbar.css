@@ -1,0 +1,150 @@
+.toolbar {
+  width: 250px;
+  background: white;
+  padding: 1rem;
+  border-right: 1px solid #e1e5e9;
+  overflow-y: auto;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.toolbar-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.toolbar-section h3 {
+  color: #333;
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.color-palette {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.color-btn {
+  width: 100%;
+  height: 40px;
+  border: 2px solid #e1e5e9;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.color-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.color-btn.active {
+  border-color: #333;
+  box-shadow: 0 0 0 2px #667eea;
+}
+
+.width-control {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.width-slider {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: #e1e5e9;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.width-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.width-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.width-value {
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+  min-width: 40px;
+  text-align: center;
+}
+
+.clear-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.clear-btn:hover {
+  background: #c82333;
+}
+
+.toolbar-info {
+  background: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border-left: 4px solid #667eea;
+}
+
+.toolbar-info p {
+  color: #666;
+  margin: 0 0 0.25rem 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.toolbar-info p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e1e5e9;
+    max-height: 200px;
+  }
+  
+  .color-palette {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .width-control {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+} 
